@@ -1,0 +1,93 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\setlength{\fboxsep}{4pt}
+\setlength{\parindent}{0pt}
+
+\title{Linear Algebra Done Right Solutions}
+\author{Vadym}
+\date{June 2026}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\clearpage
+\setcounter{page}{1}
+
+\section*{Exercises 1C}
+{\color{red}\rule{\textwidth}{0.5pt}}
+
+\subsection*{2. Verify all assertions about subspaces in Example 1.35.}
+
+\subsubsection*{(a)}
+
+\noindent\fbox{
+\parbox{\textwidth}{
+If $b \in F$, then
+\[
+\{(x_1,x_2,x_3,x_4) \in F^4 : x_3 = 5x_4 + b\}
+\]
+is a subspace of $F^4$ if and only if $b = 0$.
+}
+}
+
+\subsubsection*{\fbox{Proof}}
+\subsubsection*{Forward direction}
+\noindent
+Suppose that
+\[
+U=\{(x_1,x_2,x_3,x_4)\in F^4 : x_3=5x_4+b\}
+\]
+is a subspace of $F^4$.
+
+Since $U$ is a subspace of $F^4$, it contains the zero vector of $F^4$. Hence
+\[
+(0,0,0,0)\in U.
+\]
+Since every vector in $U$ satisfies
+\[
+x_3 = 5x_4 + b,
+\]
+the zero vector must satisfy this equation as well. Thus
+\[
+\begin{aligned}
+0 &= 5(0) + b\\
+0 &= b,
+\end{aligned}
+\]
+and hence $b=0$.
+
+\subsubsection*{Reverse Direction}
+
+\noindent
+Suppose that $b \neq 0$. We show that $U$ is not a subspace of $F^4$.
+
+Assume, for the sake of contradiction, that $U$ is a subspace of $F^4$. Since $U$ is a subspace of $F^4$, it contains the zero vector of $F^4$. Hence
+
+\[
+(0,0,0,0)\in U.
+\]
+
+Since every vector in $U$ satisfies
+
+\[
+x_3 = 5x_4 + b,
+\]
+
+the zero vector must satisfy this equation as well. Thus
+
+\[
+\begin{aligned}
+0 &= 5(0) + b \\
+0 &= b.
+\end{aligned}
+\]
+
+This contradicts the assumption that $b \neq 0$. Therefore, $U$ is not a subspace of $F^4$.
+
+\hfill$\square$
+\end{document}
